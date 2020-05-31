@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Departement;
-use App\Http\Requests\adminRequest;
+use App\Http\Requests\depRequest;
 use DB;
 
 class DepartementContoller extends Controller
@@ -22,7 +22,7 @@ public function index(){
     $departements=Departement::all();
     return view('superadmin.departement',['departements'=>$departements]);
 }
-public function newDep(adminRequest $request){
+public function newDep(depRequest $request){
     $departement=Departement::create($request->all());
     return response()->json($departement);
 }

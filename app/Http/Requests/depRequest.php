@@ -4,9 +4,9 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class adminRequest extends FormRequest
+class depRequest extends FormRequest
 {
-    /**
+     /**
      * Determine if the user is authorized to make this request.
      *
      * @return bool
@@ -24,7 +24,7 @@ class adminRequest extends FormRequest
     public function rules()
     {
         return [
-            "cin"=>'unique:administrateurs'
+            "nom"=>'unique:departements'
         ];
     }
 }
